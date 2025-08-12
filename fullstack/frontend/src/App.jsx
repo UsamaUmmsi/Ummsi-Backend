@@ -1,8 +1,6 @@
- import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import axios from "axios"
+import { useEffect, useState } from 'react';
+import './App.css';
+import axios from "axios";
 
 function App() {
   const [jokes, setJokes] = useState([])
@@ -15,13 +13,13 @@ function App() {
     .catch((error) => {
       console.log(error);   
     })
-  })
+  },[])
 
   return (
     <>
+    <div className="container">
     <h1>Ummsi-With-FullStack</h1>
-    <p>Jokes: {jokes.length}</p>
-
+    <p>JOKES: {jokes.length}</p>
     {
     jokes.map((joke) => (
         <div key={joke.id}>
@@ -30,6 +28,7 @@ function App() {
         </div>
       ))
     }
+    </div>
     </>
   )
 }

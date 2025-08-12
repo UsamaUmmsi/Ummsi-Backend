@@ -66,3 +66,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.container {
+  width: 100vw;
+  min-height: 100vh; /* poori screen ki height */
+  padding: 0px;
+  box-sizing: border-box;
+  text-justify: center;
+}

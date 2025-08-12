@@ -8,8 +8,11 @@ const app = express();
 //   res.send("Server is ready now");
 // });
 
+app.use(express.static('dist'))
+
+
 // get a list of 5 jokes 
-app.get("/api/jokes", (req, res) => {
+app.get("/api/jokes",( req , res ) => {
   const jokes = [
   {
     id: 1,
@@ -39,10 +42,9 @@ app.get("/api/jokes", (req, res) => {
 ];
 res.send(jokes)
 });
-
-
+ 
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => {
-  console.log(`Server at https://localhost:${port}`);
+app.listen(port,() => {
+  console.log(`Server at http://localhost:${port}`);
 });
