@@ -31,4 +31,4 @@ const productSchema = new mongoose.schema({
     },
 },{timestamps: true});
 
-export const Category = mongoose.model("Category",productSchema);
+export const Category = mongoose.model("Category", productSchema);

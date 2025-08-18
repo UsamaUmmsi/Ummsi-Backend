@@ -31,7 +31,13 @@ const subTodoSchema = new mongoose.model({
   createdBy:{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-  }
+  },
+  subTodo:[
+    {
+      type : mongoose.Schema.Types.ObjectId,
+      ref : "subTodo",
+    }
+  ]
 },{timestamps: true})
 
 export const  SubTodo = mongoose.model("SubTodo",subTodoSchema);
